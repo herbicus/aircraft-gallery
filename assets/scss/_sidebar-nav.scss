@@ -1,0 +1,76 @@
+// -------------------------------------
+//   Sidebar Nav
+// -------------------------------------
+// ----- Axis/Allies & Aircract navs
+// -------------------------------------
+
+.l-sidebar-container {
+	@include span-columns(4);
+	min-height: 100vh;
+	text-align: center;
+	position: fixed;
+	overflow: scroll;
+	background: $white;
+	right: 20px;
+	
+	// l-sidebar-container mq
+	@include media(max-width 768px, 6) { // tablet portratait & below
+		display: none;
+		
+ 	}
+}
+
+.l-powers-nav {
+	padding-top: 20px;
+	padding: 20px 0 20px 0;
+	ul {
+		li {
+			display: inline-block;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 20px;  
+			
+			a {
+				position: relative;
+				top: -15px;
+				left: 20px;
+			}
+
+			&:first-child a {
+				left: -20px;
+			}
+		}
+	}
+}
+
+.l-aircraft-nav {
+	ul {
+		li {
+			text-indent: -9999px; 
+			display: block;
+			width: 100%;
+			max-width: 500px;
+			height: 100%;
+			margin: 7vh 0;
+			min-height: 75px;
+			background: url("../img/P51-Mustang.png");
+			@include bg-contain;
+			@include transition(all 0.3s ease-in-out);
+			-webkit-filter: grayscale(100%);
+			   -moz-filter: grayscale(100%);
+			    -ms-filter: grayscale(100%);
+			     -o-filter: grayscale(100%);
+			        filter: grayscale(100%);
+			
+			&:hover {
+				cursor: pointer;
+				-webkit-filter: grayscale(0);
+				   -moz-filter: grayscale(0);
+				    -ms-filter: grayscale(0);
+				     -o-filter: grayscale(0);
+				        filter: grayscale(0);
+				
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+// -------------------------------------
+//   Header
+// -------------------------------------
+// ----- Header stylings
+// -------------------------------------
+
+header {
+	min-height: 75px;
+	width: 100%;
+	background: $cream;
+	padding: 10px 0 20px 0;
+	position: fixed;
+	-webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.l-top-header {
+	.l-header-logo {
+		float: left;
+		//font-size: 12px;
+		text-indent: -9999px;
+		width: 200px;
+		background: url("../img/logo-sml.png");
+		@include bg-contain;
+		@include fade-hover;
+	}
+	
+}
+
+.l-top-header nav {
+	height: 75px;
+	ul {
+		float: right;
+		li {
+			display: inline-block;
+			text-transform: uppercase;
+			letter-spacing: 1px; 
+			
+			a {
+				color: $navy;
+				@include underline-hover($muteBlue);
+				
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+// -------------------------------------
+//   Main Container
+// -------------------------------------
+// ----- Images, Title, Description, etc...
+// -------------------------------------
+
+.l-main-container {
+	@include span-columns(8);
+	//min-height: 100vh;
+	text-align: center;
+	background-color: $white;
+	background: url("../img/blue-sky-flat-bg.png")repeat-y fixed;
+	@include bg-cover;
+	background-position: 50% 0; 
+	-webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	
+	p {
+		text-align: left;
+		padding: 0 5%;
+	}
+
+	// l-main-container mq
+	@include media(max-width 768px, 6) { // tablet portratait & below
+    	@include span-columns(12);
+    	@include row();
+    	@include outer-container;
+    	
+    	img {
+    		width: 100%;
+    		max-width: 90%;
+    	}
+
+    	@include mq(iphone) {
+    		max-width: 320px;
+    	}
+    	@include mq(android) {
+    		max-width: 480px;
+    	}
+    	@include mq(tablet) {
+    		max-width: 768px;
+    	}
+    	float: left;
+    	padding-top: 1em;
+ 	}
+}

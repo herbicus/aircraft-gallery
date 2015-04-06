@@ -1,0 +1,60 @@
+// -------------------------------------
+//   Layout
+// -------------------------------------
+// ----- Global layout classes (margin, padding, floats, etc).
+// -------------------------------------
+
+*,
+*:before,
+*:after  {
+   -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+           box-sizing: border-box; 
+}
+
+// GLOBAL STYLES
+
+body, html {
+	width: 100%;
+	height: 100%;
+	background: $white;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font-family: 'neutratext';
+}
+
+body {
+	position: relative;
+}
+
+.l-content-wrap {
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 20px;
+	@include clearfix;
+}
+
+.l-site-wrap {
+	padding-top: 130px;
+}
+
+// iPad with portrait orientation.
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+	body {
+		height: 1024px;
+	}
+}
+ 
+
+//iPad with landscape orientation.
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+	body {
+		height: 768px;
+	}
+}
+
